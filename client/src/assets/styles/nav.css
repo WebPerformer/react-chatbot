@@ -1,0 +1,91 @@
+.nav{
+    position: absolute;
+    width: 100%;
+    padding: 20px 0;
+    background-color: var(--white-color);
+    z-index: 1;
+}
+
+.nav.sticky{
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 5px 5px rgba(0,0,0,.1);
+    z-index: 1;
+    animation: position .25s linear;
+}
+
+@keyframes position{
+    0%{top: -60px;}
+    100%{top: 0;}
+}
+
+.nav .nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav .nav-container .brand img{
+    display: block;
+    width: 60px;
+}
+
+.nav .nav-container .menu-list{
+    display: flex;
+    align-items: center;
+}
+
+.nav .nav-container .menu-list li{
+    list-style: none;
+    margin-left: 40px;
+}
+
+.nav .nav-container .menu-list .active{
+    color: var(--primary-color);
+}
+
+.nav .nav-container .menu-list li a{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--secondary-color);
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.nav .nav-container .menu-list li a.is-active{
+    color: var(--primary-color);
+}
+
+.nav .nav-container .menu-list li a:hover{
+    color: var(--primary-color);
+}
+
+.nav .nav-container .menu-list li .button{
+    padding: 8px 30px;
+    border-radius: 100px;
+    color: var(--white-color);
+    background-color: var(--secondary-color);
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.nav .nav-container .menu-list li:hover .button{
+    background-color: var(--primary-color);
+}
+
+/* NAV RESPONSE */
+.nav .nav-container .menu-list .menu-icon{
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 50%;
+    color: var(--secondary-color);
+    background-color: var(--light-gray-color);
+    line-height: 0;
+    margin-left: 20px;
+}
+
+@media(max-width: 500px){
+    .nav .nav-container .menu-list li{
+        display: none;
+    }
+}

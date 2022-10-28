@@ -1,0 +1,181 @@
+.hero{
+    position: relative;
+    background-image: url('../img/line.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    padding-top: 100px;
+    padding-bottom: 0;
+}
+
+.hero .shap{
+    position: absolute;
+    height: 80%;
+    z-index: -1;
+}
+
+.hero .shap-1{
+    top: -50px;
+    left: -100px;
+}
+
+.hero .shap-2{
+    top: 150px;
+    right: -100px;
+}
+
+.hero .hero-container{
+    display: flex;
+    align-items: center;
+}
+
+/* left */
+.hero .hero-container .left{
+    width: 50%;
+}
+
+.hero .hero-container .left .mid-text{
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.hero .hero-container .left .big-text{
+    font-size: 120px;
+    font-weight: 500;
+    color: var(--secondary-color);
+    line-height: 1;
+}
+
+.hero .hero-container .left .big-text span{
+    color: var(--primary-color);
+}
+
+.hero .hero-container .left .small-text{
+    font-size: 17px;
+    color: var(--dark-gray-color);
+    margin: 20px 0;
+}
+
+.hero .hero-container .left .buttons{
+    display: flex;
+    align-items: center;
+}
+
+.hero .hero-container .left .buttons button{
+    border: none;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.hero .hero-container .left .buttons .play-button{
+    width: 65px;
+    height: 65px;
+    line-height: 0;
+    font-size: 30px;
+    color: var(--primary-color);
+    background-color: var(--light-gray-color);
+    border-radius: 50%;
+    box-shadow: 3px 3px 15px rgba(0,0,0,.2);
+}
+
+.hero .hero-container .left .buttons .play-button:hover svg{
+    transition: all .5s ease-out;
+}
+
+.hero .hero-container .left .buttons .play-button:hover svg{
+    color: var(--secondary-color);
+}
+
+.hero .hero-container .left .buttons .read_more-button{
+    padding: 12px 30px;
+    font-size: 16px;
+    color: var(--white-color);
+    background-color: var(--secondary-color);
+    border-radius: 100px;
+    transition: all .5s ease;
+}
+
+.hero .hero-container .left .buttons .read_more-button:hover{
+    background-color: var(--primary-color);
+}
+
+/* right */
+.hero .hero-container .right{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.hero .hero-container .right img{
+    width: 80%;
+    animation: phoneAnimation 10s linear infinite;
+}
+
+@keyframes phoneAnimation{
+    0%{transform: scale(1);}
+    50%{transform: scale(1.05);}
+    100%{transform: scale(1);}
+}
+
+@media(max-width: 950px){
+    .hero .hero-container .left .mid-text{
+        font-size: 20px;
+    }
+    .hero .hero-container .left .big-text{
+        font-size: 80px;
+    }
+    .hero .hero-container .left .buttons .play-button{
+        width: 55px;
+        height: 55px;
+        font-size: 25px;
+    }
+}
+
+@media(max-width: 780px){
+    .hero .hero-container{
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero .hero-container .left{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .hero .hero-container .left .buttons{
+        justify-content: center;
+    }
+    .hero .hero-container .right{
+        width: 70%;
+        justify-content: center;
+    }
+    .hero .shap-1{
+        display: none;
+    }
+    .hero .shap-2{
+        right: -250px;
+    }
+    .hero .hero-container .left .buttons button{
+        margin-right: 0;
+    }
+    .hero .hero-container .left .buttons .play-button{
+        margin-right: 20px;
+    }
+}
+
+@media(max-width: 640px){
+    .hero .hero-container .right{
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 510px){
+    .hero .hero-container .left .mid-text{
+        font-size: 4vw;
+    }
+    .hero .hero-container .left .big-text{
+        font-size: 16vw;
+    }
+}

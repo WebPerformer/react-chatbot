@@ -1,0 +1,133 @@
+.resources .resources-container .resources-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+}
+
+.resources .resources-container .resources-cards .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow:  10px 10px 27px #e8e8e8,
+                 -10px -10px 27px #ffffff;
+    cursor: default;
+    transition: all .5s ease;
+}
+
+.resources .resources-container .resources-cards .card:hover{
+    transform: translateY(-10px);
+}
+
+.resources .resources-container .resources-cards .card .resource-icon{
+    line-height: 0;
+    padding: 15px;
+    font-size: 35px;
+    color: var(--secondary-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.resources .resources-container .resources-cards .card .resource-name{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.resources .resources-container .resources-cards .card .resource-description{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--dark-gray-color);
+    margin-bottom: 20px;
+}
+
+.resources .resources-container .resources-cards .card .resource-button{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--primary-color);
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.resources .resources-container .resources-cards .card .resource-button:hover{
+    color: var(--secondary-color);
+}
+
+.resources .resources-modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: var(--white-color);
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    transition: all .5s ease;
+}
+
+.resources .resources-modal .close-button{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 20px;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.resources .resources-modal .modal-icon{
+    font-size: 30px;
+    color: var(--secondary-color);
+}
+
+.resources .resources-modal .modal-name{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.resources .resources-modal .modal-description{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--dark-gray-color);
+}
+
+.resources .bg-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,.2);
+    z-index: 1;
+}
+
+@media(max-width: 970px){
+    .resources .resources-container .resources-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 640px){
+    .resources .resources-container .resources-cards{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 520px){
+    .resources .resources-modal{
+        width: 90%;
+    }
+}

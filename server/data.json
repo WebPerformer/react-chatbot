@@ -1,0 +1,57 @@
+{
+  "intents": [
+
+    {"tag": "Boas vindas",
+      "patterns": ["Oi, tudo bem?", "Olá", "Oi","Chatbot","Opa", "Ei", "Ou","Hey"],
+      "responses": ["Olá, irei te ajudar com dúvidas sobre vacinação sobre 2 doenças: Meningite ou Sarampo","Olá, me chamo Vacbot, e irei te ajudar com dúvidas sobre vacinação sobre 2 doenças: Meningite ou Sarampo","Olá, me chamo Vacbot, me diga em que posso ajudar sobre Meningite ou Sarampo?"]
+    },
+    {"tag": "Detalhes Idade vacinação Sarampo",
+      "patterns": ["Faixa etária da vacinação do Sarampo","Com quantos anos eu devo tomar a vacina do Sarampo? ","Qual é a faixa etária da vacinação do Sarampo?","Qual é a faixa etária da vacinação do Sarampo?","Idade de vacinação do Sarampo", "quando devo tomar a vacina do Sarampo"],
+      "responses": [" <strong> DOSES DE VACINA DO SARAMPO / FAIXA ETARIA: </strong> <br> <br> Controle e organização com as vacinas em dia: <br> Dose zero: 6 meses a menores de 1 ano (dose extra). <br> 1ª dose: 1 ano  2ª dose: 1 ano e 3 meses <br> Observação: a partir da 2ª dose, as vacinas aplicadas são válidas para toda a vida. <br> <br> Sem controle e organização, sem saber quais vacinas estão em dia: <br> De 1 a 29 anos: Necessário 2 doses  <br> De 30 a 59 anos: Necessário 1 dose"]
+    },
+    {"tag": "Detalhes sintomas Sarampo",
+      "patterns": ["Sintomas","Quais são os sintomas?","Sintomas causados pelo Sarampo?","Quais sintomas causados pelo Sarampo?","Reação","O que ele faz","O que o Sarampo faz?","Se eu pegar Sarampo, o que acontece?","Se eu pegar sarampo, quais os sintomas?","Danos causados pela doença","Danos"],
+      "responses": ["<strong> DANOS CAUSADOS PELA DOENCA SARAMPO </strong> <br> <br> Febre <br> Manchas avermelhadas pelo corpo <br> Tosse <br> Coriza (inflamação da mucosa que reveste o nariz) <br> Conjuntivite (olhos vermelhos e lacrimejantes) <br> Fotofobia (sensibilidade à luz) <br> Manchas brancas dentro da boca "]
+    },
+    {"tag": "Detalhes vacinas Sarampo",
+      "patterns": ["Quais são as vacina eficaz contra o Sarampo?", "Vacinas do Sarampo", "Existe mais de uma vacina do Sarampo?"],
+      "responses": [" <br> <strong> Dupla viral: </strong> protege do vírus do sarampo e da rubéola. Pode ser utilizada para o bloqueio vacinal em situação de surto; <br> <strong> Tríplice viral: </strong> protege do vírus do sarampo, caxumba e rubéola; <br> <strong> Tetra viral: </strong> protege do vírus do sarampo, caxumba, rubéola e varicela (catapora). "]
+    },
+    {"tag": "Detalhes sobre Sarampo",
+      "patterns": ["Sobre a doenca sarampo?","O que é Sarampo?"],
+      "responses": ["O Sarampo é uma doença infecciosa grave, provocada por vírus, transmitida pela fala, tosse e espirro, e extremamente contagiosa, podendo ser contraída por pessoas de qualquer idade.  caracterizada por febre, inflamação das mucosas do trato respiratório, erupção maculopapular generalizada seguida por descamação.  importante lembrar que a única forma de prevenção é a vacina disponível no Sistema unico de Saúde (SUS). "]
+    },
+    {"tag": "Detalhes Idade Meningite",
+      "patterns": ["Faixa etária da vacinação de meningite", "Com quantos anos eu devo tomar a vacina de meningite?"],
+      "responses": [" <strong> VACINA DA MENINGITE / FAIXA ETARIA: </strong> <br> <br> Duas doses aos 3 e 5 meses de idade, e a dose de reforço aos 12 meses de idade <br> Meninos de 11 a 14 anos <br> Meninas de 9 a 14 anos <br> <br> Observação: é justamente pelo fato de a inibição do contágio ser feita por meio da vacinação dos jovens, que apenas eles são os mais afetados pela doença. é como se fosse o ponto de partida por onde a doença consegue se distribuir com mais facilidade."]
+    },
+    {"tag": "Detalhes sobre Meningite",
+      "patterns": ["Tipos de Meningite","Tipos de meningite?", "Meningite", "Sobre a meningite"],
+      "responses": [" <strong> TIPOS DE MENINGITE </strong> <br> <br> Me fale de qual tipo de meningite você deseja falar: <br> Meningite viral <br> Meningite Bacteriana <br> Meningite de parasitas."]
+    },
+        {"tag": "Viral",
+      "patterns": ["Meningite Viral","Viral"],
+      "responses": [" <strong> Meningite Viral </strong> <br> <br> Para as meningites virais, na maioria dos casos, não se faz tratamento com medicamentos antivirais. Em geral as pessoas são internadas e monitoradas quanto a sinais de maior gravidade, e se recuperam espontaneamente. Porém alguns vírus como herpesvírus e influenza podem vir a provocar meningite com necessidade de uso de antiviral específico <br>  <br> SINTOMAS <br> Febre <br> Dor de cabeça <br> Rigidez no pescoço <br> Náusea <br> Vômito <br> Falta de apetite <br> Irritabilidade <br> Sonolência ou dificuldade para acordar do sono <br> Letargia (falta de energia) <br> Fotofobia (aumento da sensibilidade à luz)"]
+    },
+    {"tag": "Bacteriana",
+      "patterns": ["Meningite Bacteriana","Bacteriana"],
+      "responses": [" <strong> Meningite Bacteriana </strong> <br> <br> Para tratamento das meningites bacterianas, faz-se uso de antibioticoterapia em ambiente hospitalar, com drogas de escolha e dosagens terapêuticas prescritas pelos médicos assistentes do caso <br>  <br> SINTOMAS <br> Mal estar <br> Náusea <br> Rigidez no pescoço <br> Náusea <br> Vômito <br> Fotofobia (aumento da sensibilidade à luz) <br> Status mental alterado (confusão) "]
+    },
+    {"tag": "Meningite de parasitas",
+       "patterns": ["Meningite de parasitas","parasitas"],
+       "responses": [" <strong> Meningite de Parasitas </strong> <br> <br> Tal como acontece com a meningite causada por outras infecções, as pessoas que desenvolvem este tipo de meningite podem apresentar dores de cabeça, rigidez no pescoço, náuseas, vômitos, fotofobia (sensibilidade à luz) e/ou estado mental alterado"]
+	   },
+    {"tag": "Meningite por fungos",
+       "patterns": ["Meningite por fungos","fungos","Miningite de fungos","Meningite de fungos"],
+       "responses": [" <strong> Meningite por fungos </strong> <br> <br> Os sinais e sintomas de meningite fúngica são parecidos com os causados por outros tipos de agentes etiológicos, como segue: febre, dor de cabeça, rigidez no pescoço, náusea, vomitos, fotofobia (sensibilidade à luz), e status mental alterado (confusão)."]
+	   },
+        {"tag": "Desenvolvedores",
+       "patterns": ["Quem desenvolveu","responsaveis pela aplicação","creditos"],
+       "responses": [" <strong> DESENVOLVEDORES </strong> <br> <br> Gabriel Silva Araujo <br> Igor Agapito Matos <br> Lucas Raimundo Santana da Silva <br> Pedro Henrique da Silva Ramos <br> Ryan Rodrigues Fernandes Lima"]
+	   },
+           {"tag": "Agradecimento",
+       "patterns": ["Obrigado","muito bom","até a proxima", "xau", "tchau"],
+       "responses": [" <strong> Obrigado por utilizar nosso sistema </strong> <br> <br> Fico muito feliz em poder te ajudar, até a proxima."]
+	   }
+  ]
+}

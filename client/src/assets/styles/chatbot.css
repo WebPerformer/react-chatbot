@@ -1,0 +1,194 @@
+.chat-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.3);
+    z-index: -1;
+}
+
+.chatbot-modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 60px;
+    z-index: 1;
+}
+
+.chatbot-modal.activate{
+    display: block;
+}
+
+.chatbot-modal .chatbot{
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    height: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* header */
+.chatbot-modal .chatbot .chatbot-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--white-color);
+    box-shadow: -4px 4px 10px rgba(0,0,0,.2);
+}
+
+.chatbot-modal .chatbot .chatbot-header .chatbot-logo{
+    display: flex;
+    align-items: center;
+}
+
+.chatbot-modal .chatbot .chatbot-header .chatbot-logo img{
+    width: 40px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.chatbot-modal .chatbot .chatbot-header .chatbot-logo p{
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.chatbot-modal .chatbot .chatbot-header .chatbot-logo p span{
+    color: var(--primary-color);
+}
+
+.chatbot-modal .chatbot .chatbot-header .chatbot-close{
+    font-size: 20px;
+    color: var(--secondary-color);
+    line-height: 0;
+    cursor: pointer;
+}
+
+/* chat */
+.chatbot-modal .chatbot .chatbot-chat{
+    position: absolute;
+    top: 120px;
+    bottom: 100px;
+    left: 25px;
+    right: 30px;
+    overflow-y: auto;
+}
+
+.chatbot-modal .chatbot .chatbot-chat::-webkit-scrollbar{
+    width: 5px;
+}
+
+.chatbot-modal .chatbot .chatbot-chat::-webkit-scrollbar-track{
+    border-radius: 10px;
+}
+
+.chatbot-modal .chatbot .chatbot-chat .chatbot-msg{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.chatbot-modal .chatbot .chatbot-chat .chatbot-msg.right-msg{
+    flex-direction: row-reverse;
+    margin-left: 20px;
+}
+
+.chatbot-modal .chatbot .chatbot-chat .chatbot-msg.left-msg{
+    margin-right: 20px;
+}
+
+.chatbot-modal .chatbot .chatbot-chat .chatbot-msg .chatbot-img img{
+    width: 50px;
+    margin-right: 10px;
+}
+
+.chatbot-modal .chatbot .chatbot-chat .chatbot-msg.right-msg .chatbot-img img{
+    margin-left: 10px;
+}
+
+.chatbot-modal .chatbot .chatbot-chat .chatbot-msg.right-msg .chatbot-text{
+    text-align: right;
+}
+
+.chatbot-modal .chatbot .chatbot-chat .chatbot-msg .chatbot-text .chatbot-time{
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--dark-gray-color);
+}
+
+.chatbot-modal .chatbot .chatbot-chat .chatbot-msg .chatbot-text .chatbot-bubble{
+    max-width: 400px;
+    background-color: var(--light-gray-color);
+    padding: 15px;
+    border-radius: 15px;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.chatbot-modal .chatbot .chatbot-chat .chatbot-msg.left-msg .chatbot-text .chatbot-bubble{
+    border-top-left-radius: 0;
+}
+
+.chatbot-modal .chatbot .chatbot-chat .chatbot-msg.right-msg .chatbot-text .chatbot-bubble{
+    border-top-right-radius: 0;
+}
+
+/* input */
+.chatbot-modal .chatbot .chatbot-inputs form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chatbot-modal .chatbot .chatbot-inputs form input{
+    width: 100%;
+    margin-right: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--white-color);
+    box-shadow: 2px -2px 10px rgba(0,0,0,.1);;
+    padding: 20px 20px;
+    outline: none;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--secondary-color);
+    transition: all .5s ease;
+}
+
+.chatbot-modal .chatbot .chatbot-inputs form input:focus{
+    background-color: rgb(247, 247, 247);
+}
+
+.chatbot-modal .chatbot .chatbot-inputs form button{
+    font-size: 28px;
+    line-height: 0;
+    padding: 18px;
+    border: none;
+    border-radius: 50%;
+    color: var(--secondary-color);
+    background-color: var(--white-color);
+    box-shadow: 2px -2px 10px rgba(0,0,0,.1);
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.chatbot-modal .chatbot .chatbot-inputs form button svg{
+    padding-left: 5px;
+}
+
+.chatbot-modal .chatbot .chatbot-inputs form button:hover{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
